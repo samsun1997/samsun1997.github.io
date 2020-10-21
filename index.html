@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>Sun's Transportation Research</title>
+ <style type="text/css">
+ /* CSS */
+ *{margin: 0; padding: 0; list-style-type: none; ;font-size: 14px; }
+.tab-main{ margin: auto; width: 1400px; height:400px;border: 1px solid #ddd;color: #4d4d4d;}
+.tab-title{ font-size: 40px;}
+.tab-title ul{clear: both;}
+.tab-title li{width: 140px; float: left;background: #ddd; text-align: center; height: 40px; line-height: 30px; display: inline;font-family: 'Times New Roman', Times, serif;font-size: 24px;}
+.tab-title li.current{background: #4a93d7;color:#fff; }
+.tab-title li:hover{background: #4a93d7;color:#fff; }
+.tab-con{ margin-top: 50px; background: #fff; line-height: 24px; text-align: center;}
+.tab-con div{display: none;}
+.tab-con div.current{display: block;}
+input[type=range] {
+    -webkit-appearance: none;
+    width: 600px;
+    background-color: rgb(192, 197, 197);
+    border-radius: 10px;}
+.biaoqian{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+}
+.huakuai{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+.biaoqiant{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+    padding: 30px;
+}
+.banner{
+       height:600px;
+
+}
+.w{
+        width: 1400px;
+        margin: auto;
+}
+.tips1{ margin: auto; width: 1400px; height:300px;border: 1px solid #ddd;color: #4d4d4d;}
+.tel{ margin: auto; width: 1400px; height:100px;}
+.wel{ margin: auto; width: 1400px; height:160px;border: 2px solid #ddd;color: #4d4d4d;}
+.des{ margin: auto; width: 1400px; height:660px;border: 1px solid #ddd;color: #4d4d4d;}
+.fi{ margin: auto; width: 1400px; height:160px;border: 2px solid #ddd;color: #4d4d4d;}
+/* END */
+ </style>
+</head>
+<body>
+    <!-- HTML5 -->
+    <br>
+    <br>
+    <div class="tel">
+        <p style="font-size: 40px;font-weight: bold;font-family: Georgia, 'Times New Roman', Times, serif;padding: 20px;">Sun's Transportation Research</p>
+    </div>
+    <br>
+    <div class="wel">
+        <p style="font-size: 25px;font-weight: bold;font-family: Georgia, 'Times New Roman', Times, serif;padding: 10px;">Welcome!</p> 
+        <p style="font-size: 20px;font-family: Georgia, 'Times New Roman', Times, serif;line-height: 30px;padding: 10px;">This is Sun's transportation research survey.In this survey, you are invited to make a subjective assessment of some of the intersections.
+        <br>
+        This will only take you a few minutes, and it's very simple.<br>
+        If you have any questions during the process, please feedback to me by email:  sicheng.sun@foxmail.com</p>
+
+    </div>
+    <br>
+    <div class="des">
+        <p style="font-size: 25px;font-weight: bold;font-family: Georgia, 'Times New Roman', Times, serif;padding: 10px;">Description</p> 
+        <p style="font-size: 20px;font-family: Georgia, 'Times New Roman', Times, serif;line-height: 30px;padding: 10px;">
+        In this survey, you are invited to make a subjective assessment of some of the intersections. <br> <br>
+        <u style="font-size: 20px;font-family: Georgia, 'Times New Roman', Times, serif;line-height: 30px;padding: 0px;"> The survey is divided into the following steps: </u>  <br> <br>
+        1.Watch the intersection video below. <br> 
+        While watching the video, please evaluate the order of the intersection through the following two steps. <br> <br>
+        2.According to your subjective impression of the order of the intersection in the video, drag the slider below to the location you think is appropriate. <br>
+        Here is an example of a drag bar:<br> <t class="huakuai"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Most disorderly<input id="111" type="range" min="-1" value="30" max="99"/>Most orderly</t>
+        <br><br>
+        3.Select an option that you think will reflect the order of the intersection appropriately. <br>
+        Here is an example of an option: <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="group0" value="1" onclick="check1()"><span class="huakuai">Most disorderly</span> 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="group0" value="2"onclick="check1()"><span class="huakuai">More disorderly</span>  
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="group0" value="3"onclick="check1()"><span class="huakuai">Medium</span>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="group0" value="4"onclick="check1()"><span class="huakuai">More orderly</span>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="group0" value="5"onclick="check1()"><span class="huakuai">Most orderly</span>
+        <br> <br>
+        4.Make sure you have evaluated all the intersections.Click the "Generate verification code" button below to generate your verification code and copy it to the input box on the original page. <br> <br>
+        <p style="font-size: 25px;font-family: 'Times New Roman', Times, serif;text-align: center;line-height: 30px;font-weight: bold;">If you already know the survey well, start watching the video below and make your own subjective assessment.</p>
+        </p>
+    </div>
+    <br />
+    <div style="text-align: center;">
+        <iframe src="http://player.bilibili.com/player.html?aid=925369161&bvid=BV1BT4y1g7pw&cid=178918777&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="960px" height="540px"> </iframe>
+    </div>
+    
+<div class="tab-main">
+    <div class="tab-title" >
+        <ul id="tab-title">
+            <li class="current">Group1</li>
+            <li>Group2</li>
+            <li>Group3</li>
+            <li>Group4</li>
+            <li>Group5</li>
+            <li>Group6</li>
+            <li>Group7</li>
+            <li>Group8</li>
+            <li>Group9</li>
+            <li>Group10</li>
+            
+
+        </ul>
+    </div>
+    <div class="tab-con" id="tab-con">
+        <div class="current">
+            <span style="display: inline-block;padding: 20px 5px 10px 5px;" class="biaoqian">Intersection 1:</span>
+            <p class="huakuai">Most disorderly<input id="intersection1" type="range" min="-1" value="50" max="99"/>Most orderly</p>
+            <span style="display: inline-block;padding: 20px 5px 5px 5px;"  class="biaoqian">Intersection 1 order label:</span> <br>
+            <input type="radio"  name="group1" value="1" onclick="check1()"><span class="huakuai">Most disorderly</span> 
+            <input type="radio" name="group1" value="2"onclick="check1()"><span class="huakuai">More disorderly</span>  
+            <input type="radio" name="group1" value="3"onclick="check1()"><span class="huakuai">Medium</span>
+            <input type="radio" name="group1" value="4"onclick="check1()"><span class="huakuai">More orderly</span>
+            <input type="radio" name="group1" value="5"onclick="check1()"><span class="huakuai">Most orderly</span>
+            <br><br>
+            <span style="display: inline-block;padding: 20px 5px 10px 5px;" class="biaoqian">Intersection 2:</span>
+            <p class="huakuai">Most disorderly<input id="intersection2" type="range" min="-1" value="50" max="99"/>Most orderly</p>
+            <span style="display: inline-block;padding: 20px 5px 5px 5px;"  class="biaoqian">Intersection 2 order label:</span> <br>
+            <input type="radio"  name="group2" value="1" onclick="check2()"><span class="huakuai">Most disorderly</span> 
+            <input type="radio" name="group2" value="2"onclick="check2()"><span class="huakuai">More disorderly</span>  
+            <input type="radio" name="group2" value="3"onclick="check2()"><span class="huakuai">Medium</span>
+            <input type="radio" name="group2" value="4"onclick="check2()"><span class="huakuai">More orderly</span>
+            <input type="radio" name="group2" value="5"onclick="check2()"><span class="huakuai">Most orderly</span>
+            <br>
+        </div>
+        <div>
+            <span style="display: inline-block;padding: 20px 5px 10px 5px;" class="biaoqian">Intersection 3:</span>
+            <p class="huakuai">Most disorderly<input id="intersection3" type="range" min="-1" value="50" max="99"/>Most orderly</p>
+            <span style="display: inline-block;padding: 20px 5px 5px 5px;"  class="biaoqian">Intersection 3 order label:</span> <br>
+            <input type="radio" name="group3" value="1"onclick="check3()"><span class="huakuai">Most disorderly</span> 
+            <input type="radio" name="group3" value="2"onclick="check3()"><span class="huakuai">More disorderly</span>  
+            <input type="radio" name="group3" value="3"onclick="check3()"><span class="huakuai">Medium</span>
+            <input type="radio" name="group3" value="4"onclick="check3()"><span class="huakuai">More orderly</span>
+            <input type="radio" name="group3" value="5"onclick="check3()"><span class="huakuai">Most orderly</span>
+            <br><br>
+            <span style="display: inline-block;padding: 20px 5px 10px 5px;" class="biaoqian">Intersection 4:</span>
+            <p class="huakuai">Most disorderly<input id="intersection4" type="range" min="-1" value="50" max="99"/>Most orderly</p>
+            <span style="display: inline-block;padding: 20px 5px 5px 5px;"  class="biaoqian">Intersection 4 order label:</span> <br>
+            <input type="radio" name="group4" value="1"onclick="check4()"><span class="huakuai">Most disorderly</span> 
+            <input type="radio" name="group4" value="2"onclick="check4()"><span class="huakuai">More disorderly</span>  
+            <input type="radio" name="group4" value="3"onclick="check4()"><span class="huakuai">Medium</span>
+            <input type="radio" name="group4" value="4"onclick="check4()"><span class="huakuai">More orderly</span>
+            <input type="radio" name="group4" value="5"onclick="check4()"><span class="huakuai">Most orderly</span>
+            <br>
+        </div>
+        <div>
+            <span style="display: inline-block;padding: 20px 5px 10px 5px;" class="biaoqian">Intersection 5:</span>
+            <p class="huakuai">Most disorderly<input id="intersection5" type="range" min="-1" value="50" max="99"/>Most orderly</p>
+            <span style="display: inline-block;padding: 20px 5px 5px 5px;"  class="biaoqian">Intersection 5 order label:</span> <br>
+            <input type="radio" name="group5" value="1"onclick="check5()"><span class="huakuai">Most disorderly</span> 
+            <input type="radio" name="group5" value="2"onclick="check5()"><span class="huakuai">More disorderly</span>  
+            <input type="radio" name="group5" value="3"onclick="check5()"><span class="huakuai">Medium</span>
+            <input type="radio" name="group5" value="4"onclick="check5()"><span class="huakuai">More orderly</span>
+            <input type="radio" name="group5" value="5"onclick="check5()"><span class="huakuai">Most orderly</span>
+            <br><br>
+            <span style="display: inline-block;padding: 20px 5px 10px 5px;" class="biaoqian">Intersection 6:</span>
+            <p class="huakuai">Most disorderly<input id="intersection6" type="range" min="-1" value="50" max="99"/>Most orderly</p>
+            <span style="display: inline-block;padding: 20px 5px 5px 5px;"  class="biaoqian">Intersection 6 order label:</span> <br>
+            <input type="radio" name="group6" value="1"onclick="check6()"><span class="huakuai">Most disorderly</span> 
+            <input type="radio" name="group6" value="2"onclick="check6()"><span class="huakuai">More disorderly</span>  
+            <input type="radio" name="group6" value="3"onclick="check6()"><span class="huakuai">Medium</span>
+            <input type="radio" name="group6" value="4"onclick="check6()"><span class="huakuai">More orderly</span>
+            <input type="radio" name="group6" value="5"onclick="check6()"><span class="huakuai">Most orderly</span>
+            <br>
+        </div>
+        <div>
+            <span style="display: inline-block;padding: 20px 5px 10px 5px;" class="biaoqian">Intersection 7:</span>
+            <p class="huakuai">Most disorderly<input id="intersection7" type="range" min="-1" value="50" max="99"/>Most orderly</p>
+            <span style="display: inline-block;padding: 20px 5px 5px 5px;"  class="biaoqian">Intersection 7 order label:</span> <br>
+            <input type="radio" name="group7" value="1"onclick="check7()"><span class="huakuai">Most disorderly</span> 
+            <input type="radio" name="group7" value="2"onclick="check7()"><span class="huakuai">More disorderly</span>  
+            <input type="radio" name="group7" value="3"onclick="check7()"><span class="huakuai">Medium</span>
+            <input type="radio" name="group7" value="4"onclick="check7()"><span class="huakuai">More orderly</span>
+            <input type="radio" name="group7" value="5"onclick="check7()"><span class="huakuai">Most orderly</span>
+            <br><br>
+            <span style="display: inline-block;padding: 20px 5px 10px 5px;" class="biaoqian">Intersection 8:</span>
+            <p class="huakuai">Most disorderly<input id="intersection8" type="range" min="-1" value="50" max="99"/>Most orderly</p>
+            <span style="display: inline-block;padding: 20px 5px 5px 5px;"  class="biaoqian">Intersection 8 order label:</span> <br>
+            <input type="radio" name="group8" value="1"onclick="check8()"><span class="huakuai">Most disorderly</span> 
+            <input type="radio" name="group8" value="2"onclick="check8()"><span class="huakuai">More disorderly</span>  
+            <input type="radio" name="group8" value="3"onclick="check8()"><span class="huakuai">Medium</span>
+            <input type="radio" name="group8" value="4"onclick="check8()"><span class="huakuai">More orderly</span>
+            <input type="radio" name="group8" value="5"onclick="check8()"><span class="huakuai">Most orderly</span>
+            <br>
+        </div>
+        <div>
+            <span style="display: inline-block;padding: 20px 5px 10px 5px;" class="biaoqian">Intersection 9:</span>
+            <p class="huakuai">Most disorderly<input id="intersection9" type="range" min="-1" value="50" max="99"/>Most orderly</p>
+            <span style="display: inline-block;padding: 20px 5px 5px 5px;"  class="biaoqian">Intersection 9 order label:</span> <br>
+            <input type="radio" name="group9" value="1"onclick="check9()"><span class="huakuai">Most disorderly</span> 
+            <input type="radio" name="group9" value="2"onclick="check9()"><span class="huakuai">More disorderly</span>  
+            <input type="radio" name="group9" value="3"onclick="check9()"><span class="huakuai">Medium</span>
+            <input type="radio" name="group9" value="4"onclick="check9()"><span class="huakuai">More orderly</span>
+            <input type="radio" name="group9" value="5"onclick="check9()"><span class="huakuai">Most orderly</span>
+            <br><br>
+            <span style="display: inline-block;padding: 20px 5px 10px 5px;" class="biaoqian">Intersection 10:</span>
+            <p class="huakuai">Most disorderly<input id="intersection10" type="range" min="-1" value="50" max="99"/>Most orderly</p>
+            <span style="display: inline-block;padding: 20px 5px 5px 5px;"  class="biaoqian">Intersection 10 order label:</span> <br>
+            <input type="radio" name="group10" value="1"onclick="check10()"><span class="huakuai">Most disorderly</span> 
+            <input type="radio" name="group10" value="2"onclick="check10()"><span class="huakuai">More disorderly</span>  
+            <input type="radio" name="group10" value="3"onclick="check10()"><span class="huakuai">Medium</span>
+            <input type="radio" name="group10" value="4"onclick="check10()"><span class="huakuai">More orderly</span>
+            <input type="radio" name="group10" value="5"onclick="check10()"><span class="huakuai">Most orderly</span>
+            <br>
+        </div>
+        <div>
+            <span style="display: inline-block;padding: 20px 5px 10px 5px;" class="biaoqian">Intersection 11:</span>
+            <p class="huakuai">Most disorderly<input id="intersection11" type="range" min="-1" value="50" max="99"/>Most orderly</p>
+            <span style="display: inline-block;padding: 20px 5px 5px 5px;"  class="biaoqian">Intersection 11 order label:</span> <br>
+            <input type="radio" name="group11" value="1"onclick="check11()"><span class="huakuai">Most disorderly</span> 
+            <input type="radio" name="group11" value="2"onclick="check11()"><span class="huakuai">More disorderly</span>  
+            <input type="radio" name="group11" value="3"onclick="check11()"><span class="huakuai">Medium</span>
+            <input type="radio" name="group11" value="4"onclick="check11()"><span class="huakuai">More orderly</span>
+            <input type="radio" name="group11" value="5"onclick="check11()"><span class="huakuai">Most orderly</span>
+            <br><br>
+            <span style="display: inline-block;padding: 20px 5px 10px 5px;" class="biaoqian">Intersection 12:</span>
+            <p class="huakuai">Most disorderly<input id="intersection12" type="range" min="-1" value="50" max="99"/>Most orderly</p>
+            <span style="display: inline-block;padding: 20px 5px 5px 5px;"  class="biaoqian">Intersection 12 order label:</span> <br>
+            <input type="radio" name="group12" value="1"onclick="check12()"><span class="huakuai">Most disorderly</span> 
+            <input type="radio" name="group12" value="2"onclick="check12()"><span class="huakuai">More disorderly</span>  
+            <input type="radio" name="group12" value="3"onclick="check12()"><span class="huakuai">Medium</span>
+            <input type="radio" name="group12" value="4"onclick="check12()"><span class="huakuai">More orderly</span>
+            <input type="radio" name="group12" value="5"onclick="check12()"><span class="huakuai">Most orderly</span>
+            <br>
+        </div>
+        <div>
+            <span style="display: inline-block;padding: 20px 5px 10px 5px;" class="biaoqian">Intersection 13:</span>
+            <p class="huakuai">Most disorderly<input id="intersection13" type="range" min="-1" value="50" max="99"/>Most orderly</p>
+            <span style="display: inline-block;padding: 20px 5px 5px 5px;"  class="biaoqian">Intersection 13 order label:</span> <br>
+            <input type="radio" name="group13" value="1"onclick="check13()"><span class="huakuai">Most disorderly</span> 
+            <input type="radio" name="group13" value="2"onclick="check13()"><span class="huakuai">More disorderly</span>  
+            <input type="radio" name="group13" value="3"onclick="check13()"><span class="huakuai">Medium</span>
+            <input type="radio" name="group13" value="4"onclick="check13()"><span class="huakuai">More orderly</span>
+            <input type="radio" name="group13" value="5"onclick="check13()"><span class="huakuai">Most orderly</span>
+            <br><br>
+            <span style="display: inline-block;padding: 20px 5px 10px 5px;" class="biaoqian">Intersection 14:</span>
+            <p class="huakuai">Most disorderly<input id="intersection14" type="range" min="-1" value="50" max="99"/>Most orderly</p>
+            <span style="display: inline-block;padding: 20px 5px 5px 5px;"  class="biaoqian">Intersection 14 order label:</span> <br>
+            <input type="radio" name="group14" value="1"onclick="check14()"><span class="huakuai">Most disorderly</span> 
+            <input type="radio" name="group14" value="2"onclick="check14()"><span class="huakuai">More disorderly</span>  
+            <input type="radio" name="group14" value="3"onclick="check14()"><span class="huakuai">Medium</span>
+            <input type="radio" name="group14" value="4"onclick="check14()"><span class="huakuai">More orderly</span>
+            <input type="radio" name="group14" value="5"onclick="check14()"><span class="huakuai">Most orderly</span>
+            <br>
+        </div>
+        <div>
+            <span style="display: inline-block;padding: 20px 5px 10px 5px;" class="biaoqian">Intersection 15:</span>
+            <p class="huakuai">Most disorderly<input id="intersection15" type="range" min="-1" value="50" max="99"/>Most orderly</p>
+            <span style="display: inline-block;padding: 20px 5px 5px 5px;"  class="biaoqian">Intersection 15 order label:</span> <br>
+            <input type="radio" name="group15" value="1"onclick="check15()"><span class="huakuai">Most disorderly</span> 
+            <input type="radio" name="group15" value="2"onclick="check15()"><span class="huakuai">More disorderly</span>  
+            <input type="radio" name="group15" value="3"onclick="check15()"><span class="huakuai">Medium</span>
+            <input type="radio" name="group15" value="4"onclick="check15()"><span class="huakuai">More orderly</span>
+            <input type="radio" name="group15" value="5"onclick="check15()"><span class="huakuai">Most orderly</span>
+            <br><br>
+            <span style="display: inline-block;padding: 20px 5px 10px 5px;" class="biaoqian">Intersection 16:</span>
+            <p class="huakuai">Most disorderly<input id="intersection16" type="range" min="-1" value="50" max="99"/>Most orderly</p>
+            <span style="display: inline-block;padding: 20px 5px 5px 5px;"  class="biaoqian">Intersection 16 order label:</span> <br>
+            <input type="radio" name="group16" value="1"onclick="check16()"><span class="huakuai">Most disorderly</span> 
+            <input type="radio" name="group16" value="2"onclick="check16()"><span class="huakuai">More disorderly</span>  
+            <input type="radio" name="group16" value="3"onclick="check16()"><span class="huakuai">Medium</span>
+            <input type="radio" name="group16" value="4"onclick="check16()"><span class="huakuai">More orderly</span>
+            <input type="radio" name="group16" value="5"onclick="check16()"><span class="huakuai">Most orderly</span>
+            <br>
+        </div>
+        <div>
+            <span style="display: inline-block;padding: 20px 5px 10px 5px;" class="biaoqian">Intersection 17:</span>
+            <p class="huakuai">Most disorderly<input id="intersection17" type="range" min="-1" value="50" max="99"/>Most orderly</p>
+            <span style="display: inline-block;padding: 20px 5px 5px 5px;"  class="biaoqian">Intersection 17 order label:</span> <br>
+            <input type="radio" name="group17" value="1"onclick="check17()"><span class="huakuai">Most disorderly</span> 
+            <input type="radio" name="group17" value="2"onclick="check17()"><span class="huakuai">More disorderly</span>  
+            <input type="radio" name="group17" value="3"onclick="check17()"><span class="huakuai">Medium</span>
+            <input type="radio" name="group17" value="4"onclick="check17()"><span class="huakuai">More orderly</span>
+            <input type="radio" name="group17" value="5"onclick="check17()"><span class="huakuai">Most orderly</span>
+            <br><br>
+            <span style="display: inline-block;padding: 20px 5px 10px 5px;" class="biaoqian">Intersection 18:</span>
+            <p class="huakuai">Most disorderly<input id="intersection18" type="range" min="-1" value="50" max="99"/>Most orderly</p>
+            <span style="display: inline-block;padding: 20px 5px 5px 5px;"  class="biaoqian">Intersection 18 order label:</span> <br>
+            <input type="radio" name="group18" value="1"onclick="check18()"><span class="huakuai">Most disorderly</span> 
+            <input type="radio" name="group18" value="2"onclick="check18()"><span class="huakuai">More disorderly</span>  
+            <input type="radio" name="group18" value="3"onclick="check18()"><span class="huakuai">Medium</span>
+            <input type="radio" name="group18" value="4"onclick="check18()"><span class="huakuai">More orderly</span>
+            <input type="radio" name="group18" value="5"onclick="check18()"><span class="huakuai">Most orderly</span>
+            <br>
+        </div>
+        <div>
+            <span style="display: inline-block;padding: 20px 5px 10px 5px;" class="biaoqian">Intersection 19:</span>
+            <p class="huakuai">Most disorderly<input id="intersection19" type="range" min="-1" value="50" max="99"/>Most orderly</p>
+            <span style="display: inline-block;padding: 20px 5px 5px 5px;"  class="biaoqian">Intersection 19 order label:</span> <br>
+            <input type="radio" name="group19" value="1"onclick="check19()"><span class="huakuai">Most disorderly</span> 
+            <input type="radio" name="group19" value="2"onclick="check19()"><span class="huakuai">More disorderly</span>  
+            <input type="radio" name="group19" value="3"onclick="check19()"><span class="huakuai">Medium</span>
+            <input type="radio" name="group19" value="4"onclick="check19()"><span class="huakuai">More orderly</span>
+            <input type="radio" name="group19" value="5"onclick="check19()"><span class="huakuai">Most orderly</span>
+            <br><br>
+            <span style="display: inline-block;padding: 20px 5px 10px 5px;" class="biaoqian">Intersection 20:</span>
+            <p class="huakuai">Most disorderly<input id="intersection20" type="range" min="-1" value="50" max="99"/>Most orderly</p>
+            <span style="display: inline-block;padding: 20px 5px 5px 5px;"  class="biaoqian">Intersection 20 order label:</span> <br>
+            <input type="radio" name="group20" value="1"onclick="check20()"><span class="huakuai">Most disorderly</span> 
+            <input type="radio" name="group20" value="2"onclick="check20()"><span class="huakuai">More disorderly</span>  
+            <input type="radio" name="group20" value="3"onclick="check20()"><span class="huakuai">Medium</span>
+            <input type="radio" name="group20" value="4"onclick="check20()"><span class="huakuai">More orderly</span>
+            <input type="radio" name="group20" value="5"onclick="check20()"><span class="huakuai">Most orderly</span>
+            <br>
+        </div>
+    </div>
+</div>
+<br>
+
+<div class="tips1">
+    <p style="font-size: 30px;font-family: 'Times New Roman', Times, serif;font-weight: bold;text-align: center;padding: 20px 0px 0px 0px;">
+        Tips
+    </p>
+    <br>
+    <p style="font-size: 20px;font-family: 'Times New Roman', Times, serif;text-align: center;line-height: 30px;">
+        Before you generate verification code, please confirm the following, otherwise the generated verification code could be wrong, <u style="font-size: 20px;font-family: 'Times New Roman', Times, serif;text-align: center;">which could affect your submission failure.</u>
+        <br>
+        1.Make sure you select drag bars and order labels for <u style="font-size: 20px;font-family: 'Times New Roman', Times, serif;text-align: center;">all group</u> intersections.
+        <br>
+        2.Make sure you watch the video <u style="font-size: 20px;font-family: 'Times New Roman', Times, serif;text-align: center;">in its entirety</u> and make your choices based on your subjective judgment. <br> <br>
+        <k style="font-size: 22px;font-family: 'Times New Roman', Times, serif;text-align: center;line-height: 30px;color: red;">Note: If your verification code contains any English characters, you haven't done all of the above.Please check your tests.</k> <br> <br>
+        <p style="font-size: 25px;font-family: 'Times New Roman', Times, serif;text-align: center;line-height: 30px;font-weight: bold;">If you are sure that all of the above is done, click the button below to generate your verification code.</p>
+
+    </p>
+    
+</div>
+<br>
+<div style="text-align: center;"><button  type="button" onclick="mybut()" style="font-size: 20px;font-family: 'Times New Roman', Times, serif; width: 300px ;height: 50px">Generate verification code</button></div>
+<br>
+
+<div style="text-align: center;" id="keydiv"><h1 style="font-size: 30px;" id="header">Your verification code</h1></div>
+<br><br><br>
+<div style="text-align: center;"><button type="button" onclick="copyText()"style="font-size: 20px;font-family: 'Times New Roman', Times, serif; width: 400px ;height: 50px">Copy verification code to the clipboard</button></div>
+<br>
+<div class="fi">
+    <p style="font-size: 25px;font-weight: bold;font-family: Georgia, 'Times New Roman', Times, serif;padding: 10px;text-align: center;">Thanks!</p> 
+    <p style="font-size: 20px;font-family: Georgia, 'Times New Roman', Times, serif;line-height: 30px;padding: 10px;text-align: center;">Finally, you can use the one-key copy function above to copy the verification code to your clipboard.
+    <br>
+    Thank you very much for participating in our survey!<br>
+    If you have any comments or questions, please feel free to contact me by email:  sicheng.sun@foxmail.com</p>
+</div>
+<div class="tel"></div>
+<div class="tel"></div>
+<!-- END -->
+<script type="text/javascript">
+ 
+// JS
+    var lis = document.querySelectorAll("#tab-title li");
+    var i = 0, len = lis.length;
+    for (; i < len; i++){
+        var li = lis[i];
+        //记住li的索引
+        li.setAttribute('index',i);
+        li.onclick = function (){
+            //清空高亮
+            for(i = 0;i < len; i++){
+                lis[i].className = '';
+            }
+            //当前高亮
+            this.className = 'current';
+            //当鼠标经过li时，获取li的索引
+            var index = parseInt(this.getAttribute('index'));
+            var divs = document.querySelectorAll('#tab-con div');
+            var divLen = divs.length;
+            for(i = 0; i < divLen; i++){
+                var div = divs[i];
+                div.className = '';
+            }
+            divs[index].className = 'current';
+        }
+    }
+    function copyText() {
+    var Url2 = document.getElementById("keydiv").innerText;
+    var oInput = document.createElement('input');
+    oInput.value = Url2;
+    document.body.appendChild(oInput);
+    oInput.select();
+    document.execCommand("Copy");
+    oInput.className = 'oInput';
+    oInput.style.display = 'none';
+    alert('Copy successfully!');
+        }
+    function check1(){
+    var g1 = document.getElementsByName("group1");
+    var g1v="";
+    for(var i = 0;i<g1.length;i++)
+    {
+    if(g1[i].checked==true){
+    g1v=g1[i].value;
+    return g1v;
+    }
+    }
+    }
+    function check2(){
+    var g2 = document.getElementsByName("group2");
+    var g2v="";
+    for(var i = 0;i<g2.length;i++)
+    {
+    if(g2[i].checked==true){
+    g2v=g2[i].value;
+    return g2v;
+    }
+    }
+    }
+    function check3(){
+    var g3 = document.getElementsByName("group3");
+    var g3v="";
+    for(var i = 0;i<g3.length;i++)
+    {
+    if(g3[i].checked==true){
+    g3v=g3[i].value;
+    return g3v;
+    }
+    }
+    }
+    function check4(){
+    var g4 = document.getElementsByName("group4");
+    var g4v="";
+    for(var i = 0;i<g4.length;i++)
+    {
+    if(g4[i].checked==true){
+    g4v=g4[i].value;
+    return g4v;
+    }
+    }
+    }
+    function check5(){
+    var g5 = document.getElementsByName("group5");
+    var g5v="";
+    for(var i = 0;i<g5.length;i++)
+    {
+    if(g5[i].checked==true){
+    g5v=g5[i].value;
+    return g5v;
+    }
+    }
+    }
+    function check6(){
+    var g6 = document.getElementsByName("group6");
+    var g6v="";
+    for(var i = 0;i<g6.length;i++)
+    {
+    if(g6[i].checked==true){
+    g6v=g6[i].value;
+    return g6v;
+    }
+    }
+    }
+    function check7(){
+    var g7 = document.getElementsByName("group7");
+    var g7v="";
+    for(var i = 0;i<g7.length;i++)
+    {
+    if(g7[i].checked==true){
+    g7v=g7[i].value;
+    return g7v;
+    }
+    }
+    }
+    function check8(){
+    var g8 = document.getElementsByName("group8");
+    var g8v="";
+    for(var i = 0;i<g8.length;i++)
+    {
+    if(g8[i].checked==true){
+    g8v=g8[i].value;
+    return g8v;
+    }
+    }
+    }
+    function check9(){
+    var g9 = document.getElementsByName("group9");
+    var g9v="";
+    for(var i = 0;i<g9.length;i++)
+    {
+    if(g9[i].checked==true){
+    g9v=g9[i].value;
+    return g9v;
+    }
+    }
+    }
+    function check10(){
+    var g10 = document.getElementsByName("group10");
+    var g10v="";
+    for(var i = 0;i<g10.length;i++)
+    {
+    if(g10[i].checked==true){
+    g10v=g10[i].value;
+    return g10v;
+    }
+    }
+    }
+    function check11(){
+    var g11 = document.getElementsByName("group11");
+    var g11v="";
+    for(var i = 0;i<g11.length;i++)
+    {
+    if(g11[i].checked==true){
+    g11v=g11[i].value;
+    return g11v;
+    }
+    }
+    }
+    function check12(){
+    var g12 = document.getElementsByName("group12");
+    var g12v="";
+    for(var i = 0;i<g12.length;i++)
+    {
+    if(g12[i].checked==true){
+    g12v=g12[i].value;
+    return g12v;
+    }
+    }
+    }
+    function check13(){
+    var g13 = document.getElementsByName("group13");
+    var g13v="";
+    for(var i = 0;i<g13.length;i++)
+    {
+    if(g13[i].checked==true){
+    g13v=g13[i].value;
+    return g13v;
+    }
+    }
+    }
+    function check14(){
+    var g14 = document.getElementsByName("group14");
+    var g14v="";
+    for(var i = 0;i<g14.length;i++)
+    {
+    if(g14[i].checked==true){
+    g14v=g14[i].value;
+    return g14v;
+    }
+    }
+    }
+    function check15(){
+    var g15 = document.getElementsByName("group15");
+    var g15v="";
+    for(var i = 0;i<g15.length;i++)
+    {
+    if(g15[i].checked==true){
+    g15v=g15[i].value;
+    return g15v;
+    }
+    }
+    }
+    function check16(){
+    var g16 = document.getElementsByName("group16");
+    var g16v="";
+    for(var i = 0;i<g16.length;i++)
+    {
+    if(g16[i].checked==true){
+    g16v=g16[i].value;
+    return g16v;
+    }
+    }
+    }
+    function check17(){
+    var g17 = document.getElementsByName("group17");
+    var g17v="";
+    for(var i = 0;i<g17.length;i++)
+    {
+    if(g17[i].checked==true){
+    g17v=g17[i].value;
+    return g17v;
+    }
+    }
+    }
+    function check18(){
+    var g18 = document.getElementsByName("group18");
+    var g18v="";
+    for(var i = 0;i<g18.length;i++)
+    {
+    if(g18[i].checked==true){
+    g18v=g18[i].value;
+    return g18v;
+    }
+    }
+    }
+    function check19(){
+    var g19 = document.getElementsByName("group19");
+    var g19v="";
+    for(var i = 0;i<g19.length;i++)
+    {
+    if(g19[i].checked==true){
+    g19v=g19[i].value;
+    return g19v;
+    }
+    }
+    }
+    function check20(){
+    var g20 = document.getElementsByName("group20");
+    var g20v="";
+    for(var i = 0;i<g20.length;i++)
+    {
+    if(g20[i].checked==true){
+    g20v=g20[i].value;
+    return g20v;
+    }
+    }
+    }
+    function mybut(){
+        var intersection1 = document.getElementById("intersection1").value;
+        intersection1 = intersection1<10?"0"+intersection1:intersection1
+        var intersection2 = document.getElementById("intersection2").value;
+        intersection2 = intersection2<10?"0"+intersection2:intersection2
+        var intersection3 = document.getElementById("intersection3").value;
+        intersection3 = intersection3<10?"0"+intersection3:intersection3
+        var intersection4 = document.getElementById("intersection4").value;
+        intersection4 = intersection4<10?"0"+intersection4:intersection4
+        var intersection5 = document.getElementById("intersection5").value;
+        intersection5 = intersection5<10?"0"+intersection5:intersection5
+        var intersection6 = document.getElementById("intersection6").value;
+        intersection6 = intersection6<10?"0"+intersection6:intersection6
+        var intersection7 = document.getElementById("intersection7").value;
+        intersection7 = intersection7<10?"0"+intersection7:intersection7   
+        var intersection8 = document.getElementById("intersection8").value;
+        intersection8 = intersection8<10?"0"+intersection8:intersection8
+        var intersection9 = document.getElementById("intersection9").value;
+        intersection9 = intersection9<10?"0"+intersection9:intersection9
+        var intersection10 = document.getElementById("intersection10").value;
+        intersection10 = intersection10<10?"0"+intersection10:intersection10
+        var intersection11 = document.getElementById("intersection11").value;
+        intersection11 = intersection11<10?"0"+intersection11:intersection11
+        var intersection12 = document.getElementById("intersection12").value;
+        intersection12 = intersection12<10?"0"+intersection12:intersection12
+        var intersection13 = document.getElementById("intersection13").value;
+        intersection13 = intersection13<10?"0"+intersection13:intersection13
+        var intersection14 = document.getElementById("intersection14").value;
+        intersection14 = intersection14<10?"0"+intersection14:intersection14
+        var intersection15 = document.getElementById("intersection15").value;
+        intersection15 = intersection15<10?"0"+intersection15:intersection15
+        var intersection16 = document.getElementById("intersection16").value;
+        intersection16 = intersection16<10?"0"+intersection16:intersection16
+        var intersection17 = document.getElementById("intersection17").value;
+        intersection17 = intersection17<10?"0"+intersection17:intersection17
+        var intersection18 = document.getElementById("intersection18").value;
+        intersection18 = intersection18<10?"0"+intersection18:intersection18
+        var intersection19 = document.getElementById("intersection19").value;
+        intersection19 = intersection19<10?"0"+intersection19:intersection19
+        var intersection20 = document.getElementById("intersection20").value;
+        intersection20 = intersection20<10?"0"+intersection20:intersection20
+        
+
+     
+        //document.write(intersection1+intersection2+intersection3);
+        //
+        // var box1 = $("input[name='group1']:checked").val();
+        //
+        var g1vv = check1();
+        var g2vv = check2();
+        var g3vv = check3();
+        var g4vv = check4();
+        var g5vv = check5();
+        var g6vv = check6();
+        var g7vv = check7();
+        var g8vv = check8();
+        var g9vv = check9();
+        var g10vv = check10();
+        var g11vv = check11();
+        var g12vv = check12();
+        var g13vv = check13();
+        var g14vv = check14();
+        var g15vv = check15();
+        var g16vv = check16();
+        var g17vv = check17();
+        var g18vv = check18();
+        var g19vv = check19();
+        var g20vv = check20();
+        var gvvf=g1vv+g2vv+g3vv+g4vv+g5vv+g6vv+g7vv+g8vv+g9vv+g10vv+g11vv+g12vv+g13vv+g14vv+g15vv+g16vv+g17vv+g18vv+g19vv+g20vv;
+        var gf1 = intersection1+intersection2;
+        var gf2 = intersection3+intersection4;
+        var gf3 = intersection5+intersection6;
+        var gf4 = intersection7+intersection8;
+        var gf5 = intersection9+intersection10;
+        var gf6 = intersection11+intersection12;
+        var gf7 = intersection13+intersection14;
+        var gf8 = intersection15+intersection16;
+        var gf9 = intersection17+intersection18;
+        var gf10 = intersection19+intersection20;
+        var gff = gf1+gf2+gf3+gf4+gf5+gf6+gf7+gf8+gf9+gf10;
+        var final = gff+gvvf;
+        var element = document.getElementById("header");
+            element.innerHTML = final;
+        
+        
+        }
+
+// END
+ </script>
+</body>
+</html>
